@@ -30,7 +30,39 @@
     </div>
 
     <div class="poster">
-gf
+        <div class="pt"></div>
+    </div>
+
+    <div class="blog_category">
+        <div class="left_blog"><h3>Category</h3></div>
+        <div class="r_blog">
+            <div class="item_blog">
+                <div class="category_item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQybU2QmNu9mo8nVzxS3KKJ4-9S6H4bPg6zCw&s" alt="">
+                    <div class="r_side">
+                        <h3>Techology</h3>
+                        <p class="txt">Lorem ipsum dolor sit amet.</p>
+                    </div>
+                </div>
+                <div class="category_item">
+                    <img src="https://media.istockphoto.com/id/1480246301/vector/vector-illustration-of-high-school-building-vector-school-building.jpg?s=612x612&w=0&k=20&c=vR6dixHuh8Ypw1c3pjR-7ahN2V1vhCKxxTzDd7HlVbY=" alt="">
+                    <div class="r_side">
+                        <h3>School</h3>
+                        <p class="txt">Lorem ipsum dolor sit amet.</p>
+                    </div>
+                </div>
+                <div class="category_item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQS5_7oSJENwahkO0C1CutE7WjbMZqt6WREQA&s" alt="">
+                    <div class="r_side">
+                        <h3>Views</h3>
+                        <p class="txt">Lorem ipsum dolor sit amet.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="view_all">
+                <h3><a href="">View All</a></h3>
+            </div>
+        </div>
     </div>
 
     @include('modal.login')

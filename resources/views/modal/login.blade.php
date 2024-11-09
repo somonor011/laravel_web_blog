@@ -2,7 +2,16 @@
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header content-center">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">Login Account</h1> 
+                @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Login Account</h1>
             </div>
             <div class="modal-body">
                 <div class="form-group mb-2">
@@ -15,9 +24,10 @@
                 </div>
                 <button type="button" class="btn btn-primary accept-register w-100 p-2 fw-semibold">Login</button>
                 <p class="text-center mt-4 mb-2">
-                    Don't have an account? <span role="button" class="open-register-modal fw-semibold text-primary">Register</span>
+                    Don't have an account? <span role="button"
+                        class="open-register-modal fw-semibold text-primary">Register</span>
                 </p>
-            </div> 
+            </div>
         </div>
     </div>
 </div>

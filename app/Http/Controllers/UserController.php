@@ -14,6 +14,9 @@ class UserController extends Controller
 
     public function register(Request $request)
     {
+
+       
+
         try {
             if (!$request->has("first_name") || $request->first_name == null) {
                 return response()->json([

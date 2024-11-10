@@ -15,4 +15,9 @@ class BackendViewController extends Controller
     {
         return view("backend.category");
     }
+
+    public function login()
+    {
+        return view("backend.login");
+    }
 }

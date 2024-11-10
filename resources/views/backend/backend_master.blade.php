@@ -41,7 +41,9 @@
         </div>
     </div>
 </body>
-
+<script>
+    var userToken = localStorage.getItem("user_token");
+</script>
 @yield('script')
 <script src="{{ asset('/asset/js/admin.js') }}"></script>
 

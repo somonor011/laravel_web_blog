@@ -23,13 +23,16 @@
                 headers: {
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                 },
+                data :{
+                    token: userToken,
+                },
                 beforeSend: function() {
                     // before add data success
                 },
                 success: function(response) {
 
                     if (response.status != "success") {
-                        // Message response 
+                        // Message response
                         return;
                     }
 
@@ -40,7 +43,7 @@
                     $("div.list-category").html(records);
                 },
                 error: function(xhr, status, error) {
-                    // when request ready but error 
+                    // when request ready but error
                 }
             });
         });

@@ -55,6 +55,9 @@ $(document).on("click", "button.open-category-modal", function () {
     }
 
     editCategory(name.val(), description, logo, id);
+}).on("click", "button.open-content-modal", function(){
+    initCategory();
+    $("div.content-modal").modal("show");
 });
 
 function addCategory(name, description, logo) {
@@ -87,6 +90,41 @@ function addCategory(name, description, logo) {
             $("div.list-category").append(category);
         },
         error: function (xhr, status, error) {
+            // when request ready but error
+        }
+    });
+}
+
+function initCategory(){
+    $.ajax({
+        type: "POST",
+        url: "/api/admin/get-category",
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        },
+        data :{
+            token: userToken,
+        },
+        beforeSend: function() {
+            // before add data success
+        },
+        success: function(response) {
+
+            if (response.status != "success") {
+                // Message response
+                return;
+            }
+
+            let records = response.records;
+            let category = '';
+            records.forEach(record => {
+                category += `<option value="${record.id}">${record.name}</option>`
+            });
+
+            $("select.list-category-content").html(category);
+
+        },
+        error: function(xhr, status, error) {
             // when request ready but error
         }
     });
@@ -143,3 +181,18 @@ function getCategory(category) {
             </div>
             `;
 }
+
+// function getContent(content){
+//     return `<div class="col-3 p-2 category-record position-relative d-flex justify-content-end" data-id="${btoa(content.id)}">
+//                 <div class=" w-100 h-100 category bg-secondary bg-opacity-50 rounded m-2 d-flex flex-column align-items-center justify-content-center">
+//                     <div class="category-logo">
+//                         <img class="w-100 h-100 object-fit-cover  rounded-circle" src="${content.logo}" alt="">
+//                     </div>
+//                     <p class="category-name text-white mt-2">${content.title}</p>
+//                     <p class="category-description d-none text-white mt-2">${content.description}</p>
+//                 </div>
+//                 <span class="position-absolute open-edit-category p-2" role="button" data-id="${btoa(category.id)}" >
+//                     <img src="/asset/icons/edit.svg" alt="">
+//                 </span>
+//             </div>`
+// }

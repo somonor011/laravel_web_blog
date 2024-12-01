@@ -11,6 +11,7 @@
     <script src="{{ asset('/asset/bootstrap/js/bootstrap.js') }}"></script>
     <script src="{{ asset('/asset/js/jquery.js') }}"></script>
     <link rel="stylesheet" href="{{ asset('/asset/fontawesome/css/all.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
 </head>
 <body>
     <div class="m-0 p-0 row header align-items-center shadow">
@@ -34,7 +35,7 @@
         <div class="pt"></div>
     </div>
 
-    <div class="blog_category">
+    {{-- <div class="blog_category">
         <div class="left_blog"><h3>Category</h3></div>
         <div class="r_blog">
             <div class="item_blog">
@@ -64,11 +65,12 @@
                 <h3><a href="">View All</a></h3>
             </div>
         </div>
-    </div>
+    </div> --}}
 
     @include('modal.login')
     @include('modal.register')
 </body>
 <script src="{{asset("/asset/js/frontend.js")}}"></script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
 </html>

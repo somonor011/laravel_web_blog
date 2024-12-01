@@ -1,0 +1,12 @@
+.content-logo {
+    width: 60px; /* Set to your desired size */
+    height: 60px; /* Must be the same as width */
+    overflow: hidden;
+    border-radius: 50%; /* Ensures it is circular */
+}
+
+.content-logo img {
+    width: 100%; /* Image takes full width */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove bottom space under image */
+}

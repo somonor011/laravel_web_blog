@@ -20,4 +20,9 @@ class BackendViewController extends Controller
     {
         return view("backend.login");
     }
+
+    public function content()
+    {
+        return view("backend.content");
+    }
 }

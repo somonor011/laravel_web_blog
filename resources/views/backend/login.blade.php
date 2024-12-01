@@ -58,7 +58,7 @@
                 if (response.status != "success") {
                     return;
                 }
-                localStorage.setItem("user_token",respone.token);
+                localStorage.setItem("user_token",response.token);
 
                 // when login success , replace to admin dashboard
                 if(window.location.pathname==='/admin/login'){

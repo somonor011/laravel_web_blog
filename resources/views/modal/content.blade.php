@@ -1,6 +1,4 @@
-<head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
-</head>
+
 <div class="modal fade content-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-xl">
         <div class="modal-content">
@@ -23,7 +21,7 @@
                 </div>
                 <div class="form-group mb-2">
                     <label for="">Category</label>
-                    <select id="" class="form-select" class="list-category-content">
+                    <select id="" class="form-select list-category-content">
                         <option value=""></option>
                     </select>
                 </div>
@@ -35,5 +33,4 @@
         </div>
     </div>
 </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+

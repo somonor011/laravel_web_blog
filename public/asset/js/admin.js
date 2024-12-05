@@ -118,10 +118,10 @@ function initCategory(){
             let records = response.records;
             let category = '';
             records.forEach(record => {
-                category += `<option value="${record.id}">${record.name}</option>`
+                category += `<option value="${record.id}" > ${record.name} </option>`;
             });
 
-            $("select.list-category-content").html(category);
+            $(".list-category-content").html(category);
 
         },
         error: function(xhr, status, error) {
